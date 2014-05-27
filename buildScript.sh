@@ -22,9 +22,7 @@ echo "BuildScript.sh started"
 #{% enddirectory %}
 #</div>
 
-cd assets
-git clone https://github.com/papers-we-love/papers-we-love .
-cd ..
+git clone https://github.com/papers-we-love/papers-we-love assets
 
 echo "Building index.html"
 cd assets
@@ -75,6 +73,7 @@ echo -e "</div>" >> "$index"
 
 ###################################
 
+cd ..
 jekyll build
 
 echo "BuildScript.sh completed"
